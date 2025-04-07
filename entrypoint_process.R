@@ -10,6 +10,7 @@ parser$add_argument("--data.counts", dest="data_counts", type="character", help=
 parser$add_argument("--data.meta", dest="data_meta", type="character", help="input file #2")
 parser$add_argument("-a", dest="arg_a", help="extra argument a", default="0")
 parser$add_argument("-b", dest="arg_b", help="extra argument b", default="0")
+parser$add_argument("--sleep", dest="sleep", type="integer", help="sleep for n seconds", default=0)
 
 # Parse command-line arguments
 opt <- parser$parse_args()
@@ -18,6 +19,8 @@ opt <- parser$parse_args()
 if (is.null(opt$output_dir) || is.null(opt$name)) {
   stop("Error: Mandatory arguments --output_dir, --name and --input-files are required.")
 }
+
+Sys.sleep(opt$sleep)
 
 output_dir <- opt$output_dir
 name <- opt$name
