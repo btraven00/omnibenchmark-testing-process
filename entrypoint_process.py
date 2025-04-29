@@ -11,8 +11,8 @@ parser.add_argument("--output_dir", "-o", dest="output_dir", type=str, help="out
 parser.add_argument("--name", "-n", dest="name", type=str, help="name of the dataset")
 parser.add_argument("--data.counts", dest="data_counts", type=str, help="input file #1")
 parser.add_argument("--data.meta", dest="data_meta", type=str, help="input file #2")
-parser.add_argument("-a", dest="arg_a", help="extra argument a", default="0")
-parser.add_argument("-b", dest="arg_b", help="extra argument b", default="0")
+parser.add_argument("--a", dest="arg_a", help="extra argument a", default="0")
+parser.add_argument("--b", dest="arg_b", help="extra argument b", default="0")
 parser.add_argument("--sleep", dest="sleep", type=int, help="sleep for n seconds", default=0)
 
 # Parse command-line arguments
